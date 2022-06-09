@@ -1,4 +1,5 @@
 function encrypt() {
+  const fs = require('fs');
   const crypto = require("crypto");
   const algorithme = "aes-256-cbc";
   const initVector = crypto.randomBytes(16);

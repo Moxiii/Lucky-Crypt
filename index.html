@@ -23,5 +23,19 @@
 </form>
     <script src="js/index.js">
 	</script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script>
+    import * as mysql from './js/mysql.js' ;
+    $(document).ready(function(){
+      $('input[type="file"]').change(function(e) {
+                var nom = e.target.files[0].name;
+                $("h4").text(nom + ' is the selected file.');
+ 
+    });
+  });
+  sql();
+  const insert = "INSERT INTO file (name,type,pass) VALUES?";
+var values = [nom , type , pass ]
+  </script>
   </body>
 </html>
